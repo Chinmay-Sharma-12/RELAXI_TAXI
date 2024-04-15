@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon-32x32.png">
+    <title>MASSAGE THERAPIST REGISTRATION FORM</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .Head {
+            font-family: Impact;
+            font-weight: lighter;
+            text-align: center;
+            font-size: 100px;
+            text-decoration: underline 5px;
+        }
+
+        .box {
+            width: 1000px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: none;
+            border-radius: 50px;
+            padding: 20px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .fields {
+            display: block;
+            margin: 10px;
+            font-size: 30px;
+        }
+
+        .entry {
+            width: 300px;
+            /* Adjust the width as needed */
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 5px;
+        }
+
+
+        .submit-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 400px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Animations for buttons */
+        a {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .Head {
+            margin-top: 60px;
+        }
+
+        header {
+            width: 100%;
+            height: 45px;
+            background: rgba(0, 0, 0, 0.451);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+        }
+
+        header ul {
+            font-weight: bold;
+            height: 100%;
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            color: var(--greyLight);
+        }
+
+        header ul li {
+            cursor: pointer;
+            list-style: none;
+        }
+
+        header ul li:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body background="./IMAGES/BG2.jpg">
+    <header>
+        <ul>
+            <li><a href="HOME_PAGE.html">Home</a></li>
+            <li><a href="PASSENGER_FORM_PAGE.html">Book a ride</a></li>
+            <li><a href="DRIVER_FORM_PAGE.html">Join as a driver</a></li>
+            <li><a href="MASSEUSE_FORM_PAGE.html">Join as a massage therapist </a></li>
+            <li><a href="INSPIRATION_PAGE.html">Inspiration</a></li>
+            <li><a href="CONTACT_US_PAGE.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <h1 class="Head">MASSAGE THERAPIST REGISTRATION</h1>
+    <div class="box">
+        <form method="post" action="process_masseuse_form.php">
+            <div class="fields">
+                <label for="fullname">Full Name:</label>
+                <input class="entry" type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="fields">
+                <label for="email">Email:</label>
+                <input class="entry" type="email" id="email" name="email" required>
+            </div>
+
+            <div class="fields">
+                <label for="phone">Phone Number:</label>
+                <input class="entry" type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="fields">
+                <label for="license">Massage License Number:</label>
+                <input class="entry" type="text" id="license" name="license" required>
+            </div>
+
+            <div class="fields">
+                <label for="experience">Previous Job Experience (if any):</label>
+                <textarea id="experience" name="experience" rows="4"></textarea>
+            </div>
+
+            <div class="fields">
+                <input class="submit-button" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

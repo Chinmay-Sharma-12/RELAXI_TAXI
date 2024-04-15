@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LOGIN FORM</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      /* Add this CSS to your existing styles */
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .box {
+        /* Your existing styles */
+        animation: slideIn 0.5s ease-out; /* Add animation to the box */
+      }
+
+      .Head {
+        font-family: Impact;
+        font-weight: lighter;
+        text-align: center;
+        font-size: 100px;
+        text-decoration: underline 5px;
+        margin-top: 60px;
+      }
+
+      .box {
+        width: 1000px;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: none;
+        border-radius: 50px;
+        padding: 20px;
+        margin: auto;
+        margin-top: 20px;
+      }
+
+      .fields {
+        display: block;
+        margin: 10px;
+        font-size: 30px;
+      }
+
+      .entry {
+        width: 300px; /* Adjust the width as needed */
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        font-size: 20px;
+      }
+
+      .submit-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-left: 400px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-button:hover {
+        background-color: #45a049;
+      }
+      header {
+        width: 100%;
+        height: 45px;
+        background: rgba(0, 0, 0, 0.451);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+      }
+
+      header ul {
+        font-weight: bold;
+        height: 100%;
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        display: -webkit-box; /*what does this do ? */
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        color: var(--greyLight);
+      }
+
+      header ul li {
+        cursor: pointer;
+        list-style: none;
+      }
+
+      header ul li:hover {
+        color: #fff;
+      }
+
+      /* Animations for buttons */
+      a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      a:hover {
+        transform: scale(1.1);
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body background="./IMAGES/BG2.jpg">
+    <header>
+      <ul>
+        <li><a href="HOME_PAGE.html">Home</a></li>
+        <li><a href="PASSENGER_FORM_PAGE.html">Book a ride</a></li>
+        <li><a href="DRIVER_FORM_PAGE.html">Join as a driver</a></li>
+        <li>
+          <a href="MASSEUSE_FORM_PAGE.html">Join as a massage therpaist </a>
+        </li>
+        <li><a href="INSPIRATION_PAGE.html">Inspiration</a></li>
+        <li><a href="CONTACT_US_PAGE.html">Contact Us</a></li>
+      </ul>
+    </header>
+    <h1 class="Head">RELAXI TAXI</h1>
+    <div class="box">
+      <form method="post" action="passenger.php">
+        <div class="fields">
+          <label for="username">Full Name:</label>
+          <input class="entry" type="text" id="username" name="name" required/>
+        </div>
+
+        <div class="fields">
+          <label for="email">Email:</label>
+          <input class="entry" type="text" id="email" name="email" required />
+        </div>
+
+        <div class="fields">
+          <label for="no">Phone Number:</label>
+          <input class="entry" type="number" id="no" name="no" required />
+        </div>
+
+        <div class="fields">
+          <label for="d">Enter Date :</label>
+          <input class="entry" type="date" id="d" name="d" required />
+        </div>
+
+        <div class="fields">
+          <label for="t">Enter time :</label>
+          <input class="entry" type="time" id="t" name="t" required />
+        </div>
+
+        <div class="fields">
+          <label for="pickup_location">Pick-up Location:</label>
+          <input
+            class="entry"
+            type="text"
+            id="pickup_location"
+            name="pickup"
+            required
+          />
+        </div>
+
+        <div class="fields">
+          <label for="dropoff_location">Drop-off Location:</label>
+          <input
+            class="entry"
+            type="text"
+            id="dropoff_location"
+            name="drop"
+            required
+          />
+        </div>
+
+        <div class="fields">
+          <label for="special_requests">Special Requests:</label>
+          <textarea
+            class="entry"
+            id="special_requests"
+            name="sr"
+            rows="4"
+            cols="50"
+            placeholder="Enter any special requests or preferences"
+          ></textarea>
+        </div>
+
+        <div class="fields">
+          <label for="preferred_massage_type"
+            >What kind of massage would you like to get ?:</label
+          >
+          <select
+            class="entry"
+            id="preferred_massage_type"
+            name="preferred_massage_type"
+          >
+            <option class="entry" value="swedish">Swedish Massage</option>
+            <option class="entry" value="deep_tissue">
+              Deep Tissue Massage
+            </option>
+            <option class="entry" value="hot_stone">Hot Stone Massage</option>
+            <option class="entry" value="aromatherapy">
+              Aromatherapy Massage
+            </option>
+          </select>
+        </div>
+
+        <div class="fields">
+          <input
+            class="entry"
+            type="checkbox"
+            id="terms_and_conditions"
+            name="terms_and_conditions"
+            required
+          />
+          <label for="terms_and_conditions"
+            >I agree to the terms and conditions</label
+          >
+        </div>
+
+        <div class="fields">
+          <input class="submit-button" type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
